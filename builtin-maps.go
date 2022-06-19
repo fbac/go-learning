@@ -5,6 +5,9 @@ import "fmt"
 const (
 	aboutMsg = `
 	# Maps
+	https://go.dev/ref/spec#Map_types
+	[!]UNORDERED collections
+	
 	map[type]type
 
 	# Example
@@ -17,6 +20,12 @@ const (
 // create a map with long assignment
 // scope: global
 var global map[string]int = map[string]int{"one": 1, "two": 2, "three": 3}
+
+// this is an EMPTY map
+// The default zero value of a map is nil.
+// A nil map is equivalent to an empty map except that elements can’t be added.
+// https://yourbasic.org/golang/gotcha-assignment-entry-nil-map/
+// var people map[string]person
 
 func main() {
 	// about
