@@ -15,4 +15,4 @@ Since my brain has volatile memory I like to have collections like this to perfo
 
 ## TODO
 
-Maybe a go course for beginners in the future? 🤔1
+Maybe a go course for beginners in the future? 🤔
