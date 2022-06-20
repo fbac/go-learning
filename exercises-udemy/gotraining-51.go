@@ -18,7 +18,7 @@ type person struct {
 
 func main() {
 
-	pOni := person{firstName: "Oni", lastName: "Aranda", favIceCream: []string{"all of them"}}
+	pOni := person{firstName: "Oni", lastName: "Aranda", favIceCream: []string{"all of them!"}}
 	pCoco := person{firstName: "Coco", lastName: "Aranda", favIceCream: []string{"vanilla", "rum"}}
 	pKim := person{firstName: "Kim", lastName: "Aranda", favIceCream: []string{"turrón", "mojito"}}
 

@@ -18,13 +18,9 @@ type person struct {
 
 func main() {
 
-	pOni := person{firstName: "Oni", lastName: "Aranda", favIceCream: []string{"all of them"}}
+	pOni := person{firstName: "Oni", lastName: "Aranda", favIceCream: []string{"all of them!"}}
 	pCoco := person{firstName: "Coco", lastName: "Aranda", favIceCream: []string{"vanilla", "rum"}}
 	pKim := person{firstName: "Kim", lastName: "Aranda", favIceCream: []string{"turrón", "mojito"}}
-
-	fmt.Println(pOni)
-	fmt.Println(pCoco)
-	fmt.Println(pKim)
 
 	people := make(map[string]person)
 	people[pOni.firstName] = pOni

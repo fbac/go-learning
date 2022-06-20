@@ -4,9 +4,9 @@ import "fmt"
 
 const (
 	aboutMsg = `
-	# Array
-	Not idiomatic in Go!
-	Go way prefer to use slices over arrays.
+	# arrays
+	not idiomatic in Go!
+	golang's way prefer to use slices over arrays.
 	
 	[!] Slices are built on top of arrays.
 

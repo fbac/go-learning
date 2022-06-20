@@ -76,6 +76,8 @@ func main() {
 	// delete element at position 4
 	// note that [:4] will get to the index 4, but 4 is NOT included
 	fmt.Println("\ndelete item at index 4 in xy")
+	// note that in this append we'll need the notation "..."
+	// to get all the values from xy[5:]
 	xy = append(xy[:4], xy[5:]...)
 	fmt.Println("xy delete item at index 4:", xy)
 
