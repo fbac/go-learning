@@ -1,3 +1,7 @@
+/*
+	Calculate the intersection between
+	two slices: xs and ys
+*/
 package main
 
 import (
