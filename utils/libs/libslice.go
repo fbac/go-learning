@@ -7,10 +7,6 @@
 */
 package libslice
 
-const (
-	beginning int = 0
-)
-
 func popFirst(slice []int) []int {
 	slice = append(slice[1:])
 	return slice
