@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 const (
 	aboutMsg = `
@@ -89,4 +91,5 @@ func main() {
 	// 3 dimensions
 	xy3d := [][][]int{xy2d, xy2d, xy2d}
 	fmt.Println("\n3 dimension slice:", xy3d)
+
 }

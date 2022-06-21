@@ -39,9 +39,17 @@ func myAnonReturner() func() string {
 	}
 }
 
+func myAnonReturner2(i int) func() (int, string) {
+	fmt.Println("[myAnonReturner executed!]")
+	return func() (int, string) {
+		return i, fmt.Sprintf("[myAnonFuncReturned!]")
+	}
+}
+
 func main() {
 	fmt.Println(aboutMsg)
 
+	// simple anonymous func
 	func(s string) {
 		fmt.Println(s)
 	}("first anonymous func")
@@ -56,7 +64,7 @@ func main() {
 	// as first class value
 	myAnonRunner(anonFunc1)
 
-	// simpler anon func
+	// even simpler anon func assigned to a var
 	anonFunc2 := func() string {
 		return "[anonFunc2]"
 	}
@@ -70,6 +78,14 @@ func main() {
 	anonFunc3string := anonFunc3()
 	fmt.Printf("running anonFunc3 outputs: %v\n", anonFunc3string)
 
+	// return a function that has been decorated with
+	// parameters passed from main
+	anonFunc4 := myAnonReturner2(0)
+	fmt.Printf("variable anonFunc4 is type: %T\n", anonFunc4)
+
+	// run the function and print the output
+	anonFunc4int, anonFunc4string := anonFunc4()
+	fmt.Printf("running anonFunc4 outputs: %v\n", anonFunc3string)
 	/*
 		I've always thought that a common
 		mistake is to defer a f.Close,

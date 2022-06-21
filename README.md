@@ -1,18 +1,96 @@
+# fbac's go resources
 
-- [fbac's go-learning readme](#fbacs-go-learning-readme)
+- [fbac's go resources](#fbacs-go-resources)
   - [Disclaimer](#disclaimer)
+  - [Useful links](#useful-links)
+  - [Basics](#basics)
+    - [Good (personal) coding practices](#good-personal-coding-practices)
+    - [Creating a new project](#creating-a-new-project)
+    - [Command Line](#command-line)
+  - [Code samples](#code-samples)
+    - [Variables](#variables)
+      - [Primitives](#primitives)
+    - [Constants](#constants)
+      - [Typed const](#typed-const)
+      - [Untyped const](#untyped-const)
+      - [iota](#iota)
+    - [if](#if)
+    - [for](#for)
+    - [switch](#switch)
   - [TODO](#todo)
-
-# fbac's go-learning readme
 
 ## Disclaimer
 
-This repository is not intended to be a professional documentation source or anything like that.
+This documentation and resources have been collected through the time I've been learning and working with golang, since some years ago.
 
-It's just a collection of exercises, examples, tips, tricks and good practices I've collected since I started learning go years ago.1
+It's been in my personal laptop for a million years, so in order to get rid of that SPOF I'm creating this repository. If someone finds anything helpful in here that'd be awesome.
 
-Since my brain has volatile memory I like to have collections like this to perform braindumps from time to time, and if in the process it helps somebody I'd be happy.
+I've been updating it from time to time, with the simple purpose of serving as a cheatsheet and braindump some knowledge along the way, as I rarely rely on my (very) volatile memory. Hence this is, by no means, aimed to substitute official go documentation, to be a professional source of knowledge or to be maintained as it's and will be used for personal uses and fast fact-checker.
+
+## Useful links
+
+- [Official documentation](https://go.dev/doc/)
+- [Effective go](https://go.dev/doc/effective_go)
+- [Standard library](https://pkg.go.dev/std)
+- [The Go Blog](https://go.dev/blog/all)
+- [Go by Example](https://gobyexample.com)
+
+## Basics
+
+- Go is a statically typed compiled general-purpose language.
+- Built-in concurrency through goroutines and channels to communicate them.
+- Built-in garbage collection and runtime reflection.
+- Powerful standard library and modules.
+- Control flow: sequential, loop (iterative), conditional.
+
+### Good (personal) coding practices
+
+- `go.mod` and `go.sum` **have** to be versioned.
+- Declare variables only when **really** needed, trying always to reduce the memory footprint.
+- Keep the scope for each variable as narrow as possible.
+  - Always use the short declaration operator inside a code block to declare and assign a value to a variable.
+  - If a package level variable is needed, declare the var outside main using the `var <name> <type>` statement.
+- Don't forget the `init()` function, sometimes it's very useful, such as initializing imported packages.
+- defer + goroutines are best friends. Use with caution.
+
+### Creating a new project
+
+- `go mod`
+- `go mod init <path>`: create new project
+- `go mod tidy`
+
+### Command Line
+
+- `go install`
+
+## Code samples
+
+### Variables
+
+- create slices with make if you know previously the amount of elements
+- otherwise use normal fast assignment
+- library to delete from slice: beggining, end and X position
+- multidimensional
+
+#### Primitives
+
+### Constants
+
+#### Typed const
+
+#### Untyped const
+
+#### iota
+
+### if
+
+### for
+
+### switch
+
 
 ## TODO
 
-Maybe a go course for beginners in the future? 🤔
+- Maybe a go course for beginners in the future? 🤔
+- Nice links to code examples
+- Add some more lib/utils
