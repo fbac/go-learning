@@ -5,7 +5,8 @@ import (
 )
 
 const aboutMsg = `
-
+	# functions
+	
 	# syntax 
 	func (T receiver-type) myFunc(input1 type, input2 type, inputN type) (return/s) { code }
 
@@ -36,6 +37,7 @@ func (p potion) GetEffect() string {
 }
 
 // create a func that takes a bunch of potions
+// function with variadic parameters
 func ListPotionEffects(p ...potion) map[string]string {
 	var s = make(map[string]string)
 	for _, value := range p {
@@ -43,8 +45,6 @@ func ListPotionEffects(p ...potion) map[string]string {
 	}
 	return s
 }
-
-// function with variadic parameters
 
 func main() {
 	fmt.Println(aboutMsg)
@@ -64,7 +64,8 @@ func main() {
 	// in this case, when main finalizes
 	defer fmt.Println("deferred func:", poisonP.GetEffect())
 
-	// variadic functions calling
+	// calling variadic functions
+	// ideally use a slice like s:= ListPotionEffects([]potions...)
 	s := ListPotionEffects(poisonP, agilityP, strengthP)
 	for key, value := range s {
 		fmt.Println("variadic func\n", "\tname:", key, "\n\teffect:", value)
