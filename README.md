@@ -60,14 +60,14 @@ I've been updating it from time to time, with the simple purpose of serving as a
 
 ### Types
 
-- [arrays](builtins/builtin-arrays.go)
-- [slices](builtins/builtin-slices.go)
-- [maps](builtins/builtin-maps.go)
-- [structs](builtins/builtin-structs.go)
-- [anonymous structs](builtins/builtin-functions-anonymous.go)
-- [interfaces and polymorphism](builtins/builtin-interfaces-and-polymorphism.go)
-- [functions and methods](builtins/builtin-functions-and-methods.go)
-- [anonymous functions](builtins/builtin-functions-anonymous.go)
+- [arrays](builtins/arrays.go)
+- [slices](builtins/slices.go)
+- [maps](builtins/maps.go)
+- [structs](builtins/structs.go)
+- [anonymous structs](builtins/functions-anonymous.go)
+- [interfaces and polymorphism](builtins/interfaces-and-polymorphism.go)
+- [functions and methods](builtins/functions-and-methods.go)
+- [anonymous functions](builtins/functions-anonymous.go)
 
 ### Conditions and loops
 
