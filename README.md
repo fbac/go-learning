@@ -4,19 +4,12 @@
   - [Disclaimer](#disclaimer)
   - [Useful links](#useful-links)
   - [Basics](#basics)
-    - [Good (personal) coding practices](#good-personal-coding-practices)
+    - [Personal coding guidelines](#personal-coding-guidelines)
     - [Creating a new project](#creating-a-new-project)
     - [Command Line](#command-line)
   - [Code samples](#code-samples)
-    - [Variables](#variables)
-      - [Primitives](#primitives)
-    - [Constants](#constants)
-      - [Typed const](#typed-const)
-      - [Untyped const](#untyped-const)
-      - [iota](#iota)
-    - [if](#if)
-    - [for](#for)
-    - [switch](#switch)
+    - [Types](#types)
+    - [Conditions and loops](#conditions-and-loops)
   - [TODO](#todo)
 
 ## Disclaimer
@@ -43,7 +36,7 @@ I've been updating it from time to time, with the simple purpose of serving as a
 - Powerful standard library and modules.
 - Control flow: sequential, loop (iterative), conditional.
 
-### Good (personal) coding practices
+### Personal coding guidelines
 
 - `go.mod` and `go.sum` **have** to be versioned.
 - Declare variables only when **really** needed, trying always to reduce the memory footprint.
@@ -65,32 +58,25 @@ I've been updating it from time to time, with the simple purpose of serving as a
 
 ## Code samples
 
-### Variables
+### Types
 
-- create slices with make if you know previously the amount of elements
-- otherwise use normal fast assignment
-- library to delete from slice: beggining, end and X position
-- multidimensional
+- [arrays](builtins/builtin-arrays.go)
+- [slices](builtins/builtin-slices.go)
+- [maps](builtins/builtin-maps.go)
+- [structs](builtins/builtin-structs.go)
+- [anonymous structs](builtins/builtin-functions-anonymous.go)
+- [interfaces and polymorphism](builtins/builtin-interfaces-and-polymorphism.go)
+- [functions and methods](builtins/builtin-functions-and-methods.go)
+- [anonymous functions](builtins/builtin-functions-anonymous.go)
 
-#### Primitives
+### Conditions and loops
 
-### Constants
-
-#### Typed const
-
-#### Untyped const
-
-#### iota
-
-### if
-
-### for
-
-### switch
-
+- if
+- switch
+- for
 
 ## TODO
 
 - Maybe a go course for beginners in the future? 🤔
-- Nice links to code examples
-- Add some more lib/utils
+- Add more lib/utils
+- add info about primitives, typed/untyped constant, iota
