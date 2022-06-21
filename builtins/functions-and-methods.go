@@ -21,13 +21,15 @@ const aboutMsg = `
 	- in go everything is passed by value
 	`
 
-// create our struct
+// create custom struct
 type potion struct {
 	name   string
 	effect string
 }
 
-// create methods for our struct potions
+// concept: methods
+// create methods for struct potions
+// they give behavior to types
 func (p potion) GetName() string {
 	return fmt.Sprintf(p.name)
 }
@@ -36,14 +38,41 @@ func (p potion) GetEffect() string {
 	return fmt.Sprintf(p.effect)
 }
 
+// concept: variadic parameters
 // create a func that takes a bunch of potions
-// function with variadic parameters
+// variadic parameters are accepted only
+// for the last parameter
 func ListPotionEffects(p ...potion) map[string]string {
 	var s = make(map[string]string)
 	for _, value := range p {
 		s[value.name] = value.effect
 	}
 	return s
+}
+
+// concept: callbacks
+// create a function that accepts a function
+// as parameter (they're 1st class objects)
+func Craft(f func() string, n int) string {
+	name := f()
+	return fmt.Sprintf("callback function: you created %v %v", n, name)
+}
+
+func mockCraft() string {
+	return fmt.Sprintf("health potion")
+}
+
+// concept: recursion
+// typical factorial example
+func factorial(n int) int {
+	// break condition
+	// as we don't want to multiply anything
+	// to 0
+	if n == 0 {
+		return 1
+	}
+
+	return n * factorial(n-1)
 }
 
 func main() {
@@ -59,7 +88,7 @@ func main() {
 	agilityP := potion{name: "agility potion", effect: "boost agility"}
 	strengthP := potion{name: "strength potion", effect: "boost strength"}
 
-	// defer function()
+	// concept: defer function()
 	// calling functions at the closure of current function
 	// in this case, when main finalizes
 	defer fmt.Println("deferred func:", poisonP.GetEffect())
@@ -70,4 +99,8 @@ func main() {
 	for key, value := range s {
 		fmt.Println("variadic func\n", "\tname:", key, "\n\teffect:", value)
 	}
+
+	// callbacks in action
+	crafted := Craft(mockCraft, 1)
+	fmt.Println(crafted)
 }
