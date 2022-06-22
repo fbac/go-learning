@@ -14,8 +14,20 @@ const aboutMsg = `
 	# only final parameter can be variadic
 	func (T receiver-type) myFunc(input1 type, input2 type, input1variadic ...type) (return/s) { code }
 	
+	# method
+	functions attached to an specific named type
+	myType.Method(parameters)
+
+	# receivers and method set
+	# non-pointer receivers can work with non-pointer and pointer values
+    # pointer receivers only work with pointer values
+	receiver | values
+	(t T)	 | T and *T
+	(t *T)	 | *T
+
 	# docs
 	https://go.dev/ref/spec#Function_types
+	https://go.dev/ref/spec#Method_sets
 
 	# misc
 	- in go everything is passed by value

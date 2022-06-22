@@ -35,14 +35,14 @@ func myAnonRunner2(someAnonFunc func() string) {
 func myAnonReturner() func() string {
 	fmt.Println("[myAnonReturner executed!]")
 	return func() string {
-		return fmt.Sprintf("[myAnonFuncReturned!]")
+		return fmt.Sprintf("[myAnonFuncReturner!]")
 	}
 }
 
 func myAnonReturner2(i int) func() (int, string) {
-	fmt.Println("[myAnonReturner executed!]")
+	fmt.Println("[myAnonReturner2 executed!]")
 	return func() (int, string) {
-		return i, fmt.Sprintf("[myAnonFuncReturned!]")
+		return i, fmt.Sprintf("[myAnonFuncReturner2!]")
 	}
 }
 
@@ -50,6 +50,7 @@ func main() {
 	fmt.Println(aboutMsg)
 
 	// simple anonymous func
+	// define it and run directly
 	func(s string) {
 		fmt.Println(s)
 	}("first anonymous func")
@@ -70,22 +71,25 @@ func main() {
 	}
 	myAnonRunner2(anonFunc2)
 
-	// assign a returned func to a value
+	// myAnonReturner is a func that returns a func
+	// so we can assign it to a var
 	anonFunc3 := myAnonReturner()
 	fmt.Printf("variable anonFunc3 is type: %T\n", anonFunc3)
 
-	// run the function and print the output
+	// run the returned function and print the output
 	anonFunc3string := anonFunc3()
 	fmt.Printf("running anonFunc3 outputs: %v\n", anonFunc3string)
 
-	// return a function that has been decorated with
-	// parameters passed from main
+	// myAnonReturner accepts an int as parameter, then
+	// returns a function that has been decorated with
+	// the parameters passed from main
 	anonFunc4 := myAnonReturner2(0)
 	fmt.Printf("variable anonFunc4 is type: %T\n", anonFunc4)
 
-	// run the function and print the output
+	// run the function in the var and print the output
 	anonFunc4int, anonFunc4string := anonFunc4()
-	fmt.Printf("running anonFunc4 outputs: %v\n", anonFunc3string)
+	fmt.Printf("running anonFunc4 outputs: %v %v\n", anonFunc4string, anonFunc4int)
+
 	/*
 		I've always thought that a common
 		mistake is to defer a f.Close,
