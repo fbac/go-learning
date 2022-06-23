@@ -1,0 +1,1 @@
+[{"Id":0,"Name":"lesser health","Effect":"you feel slightly better","Weight":1},{"Id":1,"Name":"lesser agility","Effect":"you feel a bit more agile","Weight":2},{"Id":2,"Name":"lesser strength","Effect":"you feel a bit stronger","Weight":2}]

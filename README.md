@@ -80,5 +80,4 @@ I've been updating it from time to time, with the simple purpose of serving as a
 - Maybe a go course for beginners in the future? 🤔
 - Add more lib/utils
 - add info about primitives, typed/untyped constant, iota
-- examples with json Encoder/Decoder to/from a f *File
 - more io.Writer examples

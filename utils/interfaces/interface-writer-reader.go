@@ -64,7 +64,7 @@ func main() {
 	fmt.Fprintln(os.Stdout, "fmt.Fprintln: writing to a io.Writer (os.Stdout)")
 
 	// create a temp file
-	f, err := os.CreateTemp(".", "ioWriter-temp")
+	f, err := os.CreateTemp(".", "ioWriter-temp-")
 	if err != nil {
 		log.Fatalf("os.CreateTemp err: %v\n", err)
 	}
