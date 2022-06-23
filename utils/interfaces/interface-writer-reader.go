@@ -61,7 +61,7 @@ func main() {
 	// no need to open/close files
 	// it already exists and the go implementation
 	// manages everything for us
-	fmt.Fprintln(os.Stdout, "fmt.Fprintln: writing to a io.Writer (os.Stdout)")
+	fmt.Fprintf(os.Stdout, "[write] fmt.Fprintln: writing to an io.Writer (os.Stdout)\n")
 
 	// create a temp file
 	f, err := os.CreateTemp(".", "ioWriter-temp-")
@@ -79,7 +79,10 @@ func main() {
 	}()
 
 	// print to the file using Fprintln
-	fmt.Fprintln(f, "fmt.Fprintln: writing to a io.Writer")
+	fmt.Fprintf(f, "fmt.Fprintf: writing directly to a io.Writer (os.File)\n")
 
-	//f2 := os.OpenFile("ioWriter-examples.txt")
+	// create an io.Reader from the tempFile
+	byteStream, err := os.ReadFile(f.Name())
+	fmt.Printf("\n[read] bytes in %v:\t%v\n", f.Name(), byteStream)
+	fmt.Printf("[read] strings in %v:\t%v\n", f.Name(), string(byteStream))
 }
