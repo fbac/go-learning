@@ -13,17 +13,17 @@ func popFirst(slice []int) []int {
 }
 
 func popLast(slice []int) []int {
-	slice = append(slice[0 : len(slice)-1])
+	slice = append(slice[:len(slice)-1])
 	return slice
 }
 
 func popN(slice []int, n int) []int {
-	slice = append(slice[0:n], slice[n+1:]...)
+	slice = append(slice[:n], slice[n+1:]...)
 	return slice
 }
 
 func getFirstN(slice []int, n int) []int {
-	slice = append(slice[0:n])
+	slice = append(slice[:n])
 	return slice
 }
 
