@@ -12,17 +12,17 @@ import (
 	"testing"
 )
 
-func Test_popFirst(t *testing.T) {
+func TestPopFirst(t *testing.T) {
 	type args struct {
 		slice []int
 	}
-	tests := []struct {
+	tests := []intruct {
 		name string
 		args args
 		want []int
 	}{
 		{
-			"popFirst",
+			"PopFirst",
 			args{
 				slice: []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
 			},
@@ -31,24 +31,24 @@ func Test_popFirst(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := popFirst(tt.args.slice); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("popFirst() = %v, want %v", got, tt.want)
+			if got := PopFirst(tt.args.slice); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("PopFirst() = %v, want %v", got, tt.want)
 			}
 		})
 	}
 }
 
-func Test_popLast(t *testing.T) {
+func TestPopLast(t *testing.T) {
 	type args struct {
 		slice []int
 	}
-	tests := []struct {
+	tests := []intruct {
 		name string
 		args args
 		want []int
 	}{
 		{
-			"popLast",
+			"PopLast",
 			args{
 				slice: []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
 			},
@@ -57,25 +57,25 @@ func Test_popLast(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := popLast(tt.args.slice); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("popLast() = %v, want %v", got, tt.want)
+			if got := PopLast(tt.args.slice); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("PopLast() = %v, want %v", got, tt.want)
 			}
 		})
 	}
 }
 
-func Test_popN(t *testing.T) {
+func TestPopN(t *testing.T) {
 	type args struct {
 		slice []int
 		n     int
 	}
-	tests := []struct {
+	tests := []intruct {
 		name string
 		args args
 		want []int
 	}{
 		{
-			"popN",
+			"PopN",
 			args{
 				slice: []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
 				n:     2,
@@ -85,25 +85,25 @@ func Test_popN(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := popN(tt.args.slice, tt.args.n); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("popN() = %v, want %v", got, tt.want)
+			if got := PopN(tt.args.slice, tt.args.n); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("PopN() = %v, want %v", got, tt.want)
 			}
 		})
 	}
 }
 
-func Test_getFirstN(t *testing.T) {
+func TestGetFirstN(t *testing.T) {
 	type args struct {
 		slice []int
 		n     int
 	}
-	tests := []struct {
+	tests := []intruct {
 		name string
 		args args
 		want []int
 	}{
 		{
-			"getFirstN",
+			"GetFirstN",
 			args{
 				slice: []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
 				n:     5,
@@ -113,25 +113,25 @@ func Test_getFirstN(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := getFirstN(tt.args.slice, tt.args.n); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("getFirstN() = %v, want %v", got, tt.want)
+			if got := GetFirstN(tt.args.slice, tt.args.n); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("GetFirstN() = %v, want %v", got, tt.want)
 			}
 		})
 	}
 }
 
-func Test_getLastN(t *testing.T) {
+func TestGetLastN(t *testing.T) {
 	type args struct {
 		slice []int
 		n     int
 	}
-	tests := []struct {
+	tests := []intruct {
 		name string
 		args args
 		want []int
 	}{
 		{
-			"getLastN",
+			"GetLastN",
 			args{
 				slice: []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
 				n:     5,
@@ -141,8 +141,8 @@ func Test_getLastN(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := getLastN(tt.args.slice, tt.args.n); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("getLastN() = %v, want %v", got, tt.want)
+			if got := GetLastN(tt.args.slice, tt.args.n); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("GetLastN() = %v, want %v", got, tt.want)
 			}
 		})
 	}

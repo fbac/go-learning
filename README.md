@@ -64,20 +64,23 @@ I've been updating it from time to time, with the simple purpose of serving as a
 - [slices](builtins/slices.go)
 - [maps](builtins/maps.go)
 - [structs](builtins/structs.go)
-- [anonymous structs](builtins/functions-anonymous.go)
-- [interfaces and polymorphism](builtins/interfaces-and-polymorphism.go)
-- [functions and methods](builtins/functions-and-methods.go)
-- [anonymous functions](builtins/functions-anonymous.go)
+- [structs - anonymous](builtins/functions-anonymous.go)
+- [interfaces & polymorphism](builtins/interfaces-and-polymorphism.go)
+- [pointers](builtins/pointers.go)
+- [functions & methods](builtins/functions-and-methods.go)
+- [functions - anonymous](builtins/functions-anonymous.go)
 
 ### Conditions and loops
 
 - if
-- switch
 - for
+- [switch](builtins/switch.go)
 
 ## TODO
 
-- Maybe a go course for beginners in the future? 🤔
-- Add more lib/utils
+- maybe a go course for beginners in the future? 🤔
+- add more lib/utils
 - add info about primitives, typed/untyped constant, iota
+- add info about aggregated/composite types
+- add info about if, switch, for
 - more io.Writer examples

@@ -7,27 +7,31 @@
 */
 package libslice
 
-func popFirst(slice []int) []int {
+type sliceType interface {
+	int | float32 | float64 | string
+}
+
+func PopFirst[sT sliceType](slice []sT) []sT {
 	slice = append(slice[1:])
 	return slice
 }
 
-func popLast(slice []int) []int {
+func PopLast[sT sliceType](slice []sT) []sT {
 	slice = append(slice[:len(slice)-1])
 	return slice
 }
 
-func popN(slice []int, n int) []int {
+func PopN[sT sliceType](slice []sT, n int) []sT {
 	slice = append(slice[:n], slice[n+1:]...)
 	return slice
 }
 
-func getFirstN(slice []int, n int) []int {
+func GetFirstN[sT sliceType](slice []sT, n int) []sT {
 	slice = append(slice[:n])
 	return slice
 }
 
-func getLastN(slice []int, n int) []int {
-	slice = append(slice[n:])
+func GetLastN[sT sliceType](slice []sT, n int) []sT {
+	slice = append(slice[n+1:])
 	return slice
 }
