@@ -43,6 +43,7 @@ I've been updating it from time to time, with the simple purpose of serving as a
 - Keep the scope for each variable as narrow as possible.
   - Always use the short declaration operator inside a code block to declare and assign a value to a variable.
   - If a package level variable is needed, declare the var outside main using the `var <name> <type>` statement.
+  - be careful when returning vars from funcs to prevent variables avoiding GC.
 - Don't forget the `init()` function, sometimes it's very useful, such as initializing imported packages.
 - defer + goroutines are best friends. Use with caution.
 

@@ -25,6 +25,8 @@ const aboutMsg = `
 	(t T)	 | T and *T
 	(t *T)	 | *T
 
+	[!] the method set of a type determines the interface(s) that the type implements
+
 	# docs
 	https://go.dev/ref/spec#Function_types
 	https://go.dev/ref/spec#Method_sets
