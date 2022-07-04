@@ -48,7 +48,4 @@ func main() {
 	}
 
 	fmt.Printf("Lesser Health: %+v\n", lesserHP)
-
-	//gleimsito := potion{"Gleimsito", potionMetadata{}}
-	//fmt.Println(gleimsito)
 }
