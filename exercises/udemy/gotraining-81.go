@@ -2,7 +2,7 @@
 	create a custom type
 	Marshal it in json
 */
-package main
+package exudemy
 
 import (
 	"encoding/json"

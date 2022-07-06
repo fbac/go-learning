@@ -1,7 +1,7 @@
 /*
 	Create an use an anonymous struct
 */
-package main
+package exudemy
 
 import "fmt"
 

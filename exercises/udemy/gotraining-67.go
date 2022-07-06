@@ -1,7 +1,7 @@
 /*
 	Assign a func to a variable, then call that func
 */
-package main
+package exudemy
 
 import "fmt"
 

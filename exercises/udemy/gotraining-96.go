@@ -1,7 +1,7 @@
 /*
 	Print OS and ARCH
 */
-package main
+package exudemy
 
 import (
 	"fmt"

@@ -1,0 +1,4 @@
+mode: set
+github.com/fbac/go-resources/utils/testdocs/main.go:12.45,14.2 1 1
+github.com/fbac/go-resources/utils/testdocs/main.go:17.34,19.2 1 1
+github.com/fbac/go-resources/utils/testdocs/main.go:23.13,26.2 2 0

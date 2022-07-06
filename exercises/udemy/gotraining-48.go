@@ -6,7 +6,7 @@
 	- Print them referencing them by index pos
 */
 
-package main
+package exudemy
 
 import "fmt"
 

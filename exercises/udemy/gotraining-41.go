@@ -7,7 +7,7 @@
 	Print the type of the array
 */
 
-package main
+package exudemy
 
 import "fmt"
 

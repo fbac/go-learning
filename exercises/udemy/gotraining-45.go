@@ -6,7 +6,7 @@
 	Print the slice
 */
 
-package main
+package exudemy
 
 import "fmt"
 

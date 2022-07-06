@@ -1,5 +1,5 @@
 // print every char of the uppercase alphabet three times
-package main
+package exudemy
 
 import "fmt"
 

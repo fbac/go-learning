@@ -4,7 +4,7 @@
 	- print map using range
 */
 
-package main
+package exudemy
 
 import "fmt"
 

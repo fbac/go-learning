@@ -12,7 +12,7 @@
 	print values by single fields with good formatting
 
 */
-package main
+package exudemy
 
 import "fmt"
 

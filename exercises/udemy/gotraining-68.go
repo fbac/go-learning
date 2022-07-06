@@ -3,7 +3,7 @@
 	● assign the returned func to a variable
 	● call the returned func
 */
-package main
+package exudemy
 
 import "fmt"
 

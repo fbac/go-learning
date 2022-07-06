@@ -7,7 +7,7 @@
 	○ takes in a parameter of type []int
 	○ returns the sum of all values of type int passed in
 */
-package main
+package exudemy
 
 import "fmt"
 

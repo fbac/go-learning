@@ -2,7 +2,7 @@
 	given the json string from the last exercise
 	unmarshal it again into a struct
 */
-package main
+package exudemy
 
 import (
 	"encoding/json"

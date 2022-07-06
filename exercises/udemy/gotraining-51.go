@@ -6,7 +6,7 @@
 
 	Create two person, print the values with loops
 */
-package main
+package exudemy
 
 import "fmt"
 

@@ -1,5 +1,5 @@
 // print with a for the years you have been alive
-package main
+package exudemy
 
 import (
 	"fmt"

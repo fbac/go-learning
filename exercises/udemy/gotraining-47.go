@@ -2,7 +2,7 @@
 	Create a slice from multidimensional strings
 */
 
-package main
+package exudemy
 
 import "fmt"
 

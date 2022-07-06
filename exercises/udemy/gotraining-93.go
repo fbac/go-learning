@@ -9,7 +9,7 @@
 		- write new var into counter
 	Demonstrate there's a race condition
 */
-package main
+package exudemy
 
 import (
 	"fmt"

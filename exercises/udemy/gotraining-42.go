@@ -7,7 +7,7 @@
 	Print the type of the slice
 */
 
-package main
+package exudemy
 
 import "fmt"
 

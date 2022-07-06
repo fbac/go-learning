@@ -11,7 +11,7 @@
 	- you can pass values of type *spell to doSomething
 	- you cannot pass values of type spell to doSomething
 */
-package main
+package exudemy
 
 import "fmt"
 

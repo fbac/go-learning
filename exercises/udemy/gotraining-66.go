@@ -1,7 +1,7 @@
 /*
 	Build and use an anonnymous func
 */
-package main
+package exudemy
 
 import "fmt"
 

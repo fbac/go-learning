@@ -1,5 +1,5 @@
 // package main as expected
-package main
+package testdocs
 
 // import testing
 import "testing"
@@ -53,9 +53,9 @@ func Test_potion_String(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			p := &potion{
-				id:   tt.fields.id,
-				name: tt.fields.name,
+			p := &Potion{
+				Id:   tt.fields.id,
+				Name: tt.fields.name,
 			}
 			if got := p.String(); got != tt.want {
 				t.Errorf("potion.String() = %v, want %v", got, tt.want)

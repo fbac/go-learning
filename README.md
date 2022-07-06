@@ -27,6 +27,8 @@ I've been updating it from time to time, with the simple purpose of serving as a
 - [Standard library](https://pkg.go.dev/std)
 - [The Go Blog](https://go.dev/blog/all)
 - [Go by Example](https://gobyexample.com)
+- [golang-book](https://www.golang-book.com/)
+- [web applications with Go](https://astaxie.gitbooks.io/build-web-application-with-golang/content/en/index.html)
 
 ## Basics
 
@@ -39,6 +41,9 @@ I've been updating it from time to time, with the simple purpose of serving as a
 ### Personal coding guidelines
 
 - `go.mod` and `go.sum` **have** to be versioned.
+- Always BET: Benchmark, Example, Test!
+- Always format and check the code to meet the standard Go criteria: `gofmt`, `govet`, `golint`
+- Always test code and create cover profiles: `go test`, `go test -cover`, `go test -coverprofile=example.out`, `go tool cover -html=example.out`
 - Declare variables only when **really** needed, trying always to reduce the memory footprint.
 - Keep the scope for each variable as narrow as possible.
   - Always use the short declaration operator inside a code block to declare and assign a value to a variable.
@@ -46,6 +51,12 @@ I've been updating it from time to time, with the simple purpose of serving as a
   - be careful when returning vars from funcs to prevent variables avoiding GC.
 - Don't forget the `init()` function, sometimes it's very useful, such as initializing imported packages.
 - defer + goroutines are best friends. Use with caution.
+- Think about memory: it's usually more performant to allocate everything that you need instead of having the runtime do it dynamically. Create data structures once, not in loops if possible.
+- Always write docs and examples.
+  - Use docs.go for package docs.
+  - Use Examples in test files to write example usage.
+  - Check with `go doc [<pkg>.][<sym>.]<method>` and `godoc`, `godoc -http=:PORT`
+  - Source code with `go doc -src fmt Println`, `go doc -src fmt`, `go doc cmd/go`
 
 ### Creating a new project
 

@@ -1,5 +1,5 @@
 // modulo 4
-package main
+package exudemy
 
 import "fmt"
 

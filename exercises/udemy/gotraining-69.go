@@ -1,7 +1,7 @@
 /*
 	callback: pass a func into a func
 */
-package main
+package exudemy
 
 import "fmt"
 

@@ -11,7 +11,7 @@
 ● create a value of type person
 ● call the method from the value of type person
 */
-package main
+package exudemy
 
 import "fmt"
 

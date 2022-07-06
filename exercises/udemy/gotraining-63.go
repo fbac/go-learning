@@ -1,7 +1,7 @@
 /*
 	Use the “defer” keyword to show that a deferred func runs after the func containing it exits.
 */
-package main
+package exudemy
 
 import "fmt"
 

@@ -3,7 +3,7 @@
 	The underlying array shouldn't be extended any single time
 */
 
-package main
+package exudemy
 
 import "fmt"
 

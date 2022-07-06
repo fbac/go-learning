@@ -1,5 +1,5 @@
 // switch with no expression specified
-package main
+package exudemy
 
 import (
 	"fmt"

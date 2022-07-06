@@ -3,7 +3,7 @@
 		Each goroutine prints out something
 	use waitGroups to make sure everything finishes.
 */
-package main
+package exudemy
 
 import (
 	"fmt"

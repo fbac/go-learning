@@ -1,7 +1,7 @@
 /*
 	Create a func which encloses the scope of a var
 */
-package main
+package exudemy
 
 import "fmt"
 

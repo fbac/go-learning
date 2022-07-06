@@ -2,7 +2,7 @@
 	Encode json
 	send it to os.Stdout
 */
-package main
+package exudemy
 
 import (
 	"encoding/json"

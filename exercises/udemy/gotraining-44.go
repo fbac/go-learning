@@ -8,7 +8,7 @@
 	- print the resulting slice
 */
 
-package main
+package exudemy
 
 import "fmt"
 

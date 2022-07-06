@@ -1,5 +1,7 @@
 //	fbac test's test pkg
 //
+//	https://pkg.go.dev/testing
+//
 //	- Documentation links
 //	https://www.golang-book.com/books/intro/12
 //	https://go.dev/blog/subtests
@@ -29,4 +31,4 @@
 //	* They're published in godoc accordingly.
 //
 
-package main
+package testdocs

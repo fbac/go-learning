@@ -1,7 +1,7 @@
 /*
 	Sort slices!
 */
-package main
+package exudemy
 
 import (
 	"fmt"

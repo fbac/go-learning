@@ -1,21 +1,21 @@
-package main
+package testdocs
 
 import "fmt"
 
 // potion struct defines a potion
-type potion struct {
-	id   int
-	name string
+type Potion struct {
+	Id   int
+	Name string
 }
 
 // NewPotion returns a newly crafted potion
-func NewPotion(id int, name string) *potion {
-	return &potion{id, name}
+func NewPotion(id int, name string) *Potion {
+	return &Potion{id, name}
 }
 
 // String returns the potion name
-func (p *potion) String() string {
-	return p.name
+func (p *Potion) String() string {
+	return p.Name
 }
 
 // main is just a mock, in real use cases this would be

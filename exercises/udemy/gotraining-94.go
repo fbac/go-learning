@@ -2,7 +2,7 @@
 	Fix the race condition on the previous exercise
 	Using mutex
 */
-package main
+package exudemy
 
 import (
 	"fmt"

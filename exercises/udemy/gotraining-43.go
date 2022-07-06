@@ -3,7 +3,7 @@
 	- slice the slice into three new slices :)
 */
 
-package main
+package exudemy
 
 import "fmt"
 

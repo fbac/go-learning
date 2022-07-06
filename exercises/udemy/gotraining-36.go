@@ -1,5 +1,5 @@
 // if statement
-package main
+package exudemy
 
 import (
 	"fmt"

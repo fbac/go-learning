@@ -4,7 +4,7 @@
 	○ call both funcs
 	○ print out their results
 */
-package main
+package exudemy
 
 import "fmt"
 

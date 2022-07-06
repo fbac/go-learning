@@ -10,7 +10,7 @@
 ● use func info to print the area of square
 ● use func info to print the area of circle
 */
-package main
+package exudemy
 
 import (
 	"fmt"

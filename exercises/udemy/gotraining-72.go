@@ -16,7 +16,7 @@
 	● in func main
 		○ print out the value
 */
-package main
+package exudemy
 
 import "fmt"
 

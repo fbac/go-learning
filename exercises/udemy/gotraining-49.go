@@ -4,7 +4,7 @@
 	- Show the map looping over all the keys and all the values inside them
 */
 
-package main
+package exudemy
 
 import "fmt"
 
