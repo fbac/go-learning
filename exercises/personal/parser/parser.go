@@ -17,11 +17,14 @@ Mar-18-09:33:48 amaagent: 2
 Mar-18-09:33:48 Apache_tomcat: 2
 Mar-18-09:33:48 spark: 3
 
+	:: TODO ::
+	Parametrize log fields to parse
 */
 package main
 
 import (
 	"bufio"
+	"encoding/json"
 	"fmt"
 	"log"
 	"os"
@@ -40,34 +43,29 @@ func (l *logApp) incrementCounter() {
 
 func main() {
 
-	// Check cli args
-	if len(os.Args) < 3 {
-		// TODO take fields x, y, z
-		log.Fatalln("Usage: parser [/path/to/logfile string] [separator string]")
+	if len(os.Args) < 4 {
+		log.Fatalln("Usage: parser [/path/to/logfile string] [separator string] [json/text]")
 	}
 
-	// Open log file
 	f, err := os.Open(os.Args[1])
 	if err != nil {
 		fmt.Println(err)
 	}
-	defer f.Close()
-
-	// Create struct holding the logs
-	lApp := scannerFile(f, os.Args[2])
-
-	// implement sort.Sort, to sort dates here
-	mExists := make(map[string]bool)
-	res := ""
-	for app, line := range lApp {
-		if !mExists[line.App] {
-
-			res = fmt.Sprintf("%s\n%s %s: %v", res, line.Time, line.App, lApp[app].Incidents)
-			mExists[line.App] = true
+	defer func() {
+		if err := f.Close(); err != nil {
+			log.Fatalln("error closing file")
 		}
-	}
+	}()
 
-	fmt.Println(res)
+	switch os.Args[3] {
+	case "text":
+		fmt.Println(generateLog(scannerFile(f, os.Args[2])))
+	case "json":
+		enc := json.NewEncoder(os.Stdout)
+		enc.Encode(scannerFile(f, os.Args[2]))
+	default:
+		fmt.Println(fmt.Errorf("output format invalid: received %s, wanted text or json", os.Args[3]))
+	}
 }
 
 // ScannerFile scans the log file given a separator
@@ -116,3 +114,17 @@ func increment(name string, lApp []logApp) {
 		}
 	}
 }
+
+// generateLog parses the final log
+func generateLog(lApp []logApp) string {
+	s := ""
+	for app, line := range lApp {
+		s = fmt.Sprintf("%s\n%s %s: %v", s, line.Time, line.App, lApp[app].Incidents)
+	}
+	return s
+}
+
+/*
+func printLog(string) {
+
+}*/
