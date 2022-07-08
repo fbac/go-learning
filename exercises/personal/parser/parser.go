@@ -96,7 +96,7 @@ func scannerFile(f *os.File, sep string) []logApp {
 	return lApp
 }
 
-// logExist checks if a given application has reportes previously an error
+// logExist checks if a given application has reported previously an error
 func logExist(lines []string, lApp []logApp) bool {
 	for k := range lApp {
 		if lines[2] == lApp[k].App {
@@ -123,8 +123,3 @@ func generateLog(lApp []logApp) string {
 	}
 	return s
 }
-
-/*
-func printLog(string) {
-
-}*/
