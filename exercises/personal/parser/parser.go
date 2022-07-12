@@ -80,8 +80,7 @@ func scannerFile(f *os.File, sep string) []logApp {
 		// Divide lines by sep and create a []string
 		lines := strings.Split(s.Text(), sep)
 
-		// if the application already exist int the struct slice
-		// just increment its incidence counter.
+		// if the application already exist in the struct slice just increment its incidence counter.
 		// Otherwise add it as a new app incident.
 		if len(lines) > 2 {
 			if logExist(lines, lApp) {
